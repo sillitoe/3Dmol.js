@@ -1912,6 +1912,10 @@ $3Dmol.GLModel = (function() {
          * @function $3Dmol.GLModel.setColorByFunction
          * @param {type} sel
          * @param {type} func
+         * 
+         * Note: this function sets the value of {atom.color}, however if 
+         * {atom.style.color} has been set, then this will be used preferentially
+         * (and setting {atom.color} will have no observable effect)
          */
         this.setColorByFunction = function(sel, colorfun) {
             var atoms = this.selectedAtoms(sel, atoms);
